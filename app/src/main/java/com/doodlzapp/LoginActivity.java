@@ -26,7 +26,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextUsuario = findViewById(R.id.editTextUsuario);
         editTextContrasena = findViewById(R.id.editTextContrasena);
         buttonIngresar = findViewById(R.id.buttonIngresar);
-        buttonRegistrar =findViewById(R.id.buttonRegistrar);
+
 
 
         buttonIngresar.setOnClickListener(new View.OnClickListener() {
