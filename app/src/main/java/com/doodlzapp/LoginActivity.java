@@ -16,7 +16,7 @@ import android.widget.Toast;
 public class LoginActivity extends AppCompatActivity {
     private EditText editTextUsuario, editTextContrasena;
     private Button buttonIngresar,buttonRegistrar;
-    private DBHelper DB;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +27,7 @@ public class LoginActivity extends AppCompatActivity {
         editTextContrasena = findViewById(R.id.editTextContrasena);
         buttonIngresar = findViewById(R.id.buttonIngresar);
         buttonRegistrar =findViewById(R.id.buttonRegistrar);
-        DB=new DBHelper(this);
+
 
         buttonIngresar.setOnClickListener(new View.OnClickListener() {
             @Override
