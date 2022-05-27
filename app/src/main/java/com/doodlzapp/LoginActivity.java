@@ -39,32 +39,16 @@ public class LoginActivity extends AppCompatActivity {
                 String user2 = "bernardo";
                 String pass2 = "bernardo";
                 ;
-                if(user1 == pass1 || user2 == pass2){
+                if((user.equals(user1) && pass.equals(pass1) )||( user.equals(user2) && pass.equals(pass2))){
                     Toast.makeText(getApplicationContext(), "Te logueaste correctamente", Toast.LENGTH_LONG).show();
                     Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                     startActivity(intent);
-                }else{
-                    Toast.makeText(getApplicationContext(), "Aun no creas el usuario", Toast.LENGTH_LONG).show();
                 }
+                Toast.makeText(getApplicationContext(), user, Toast.LENGTH_LONG).show();
             }
         });
 
 
-        buttonRegistrar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String user= editTextUsuario.getText().toString();
-                String pass = editTextContrasena.getText().toString();
-                Boolean checkuser=DB.checkusername(user);
-                if(checkuser==false){
-                    Boolean insert = DB.insertData(user,pass);
-                    if (insert==true){
-                        Toast.makeText(getApplicationContext(), "Se inserto correctamente", Toast.LENGTH_LONG).show();
-                    }else{
-                        Toast.makeText(getApplicationContext(), "ya existe el usuario", Toast.LENGTH_LONG).show();
-                    }
-                }
-            }
-        });
+
     }
 }
